@@ -1,0 +1,307 @@
+html {
+  /* Controla o comportamento da rolagem quando o menu leva para uma seção da página */
+  scroll-behavior: smooth; /* Faz a rolagem acontecer de forma suave ao clicar nos links do menu */
+}
+
+body {
+  /* Define o estilo geral da página */
+  font-family: Arial, sans-serif; /* Define a fonte padrão da página */
+  background-color: #f4f4f8; /* Define o fundo claro da página */
+  margin: 0; /* Remove a margem padrão do navegador */
+  min-height: 100vh; /* Faz a página ocupar pelo menos toda a altura da tela */
+  display: flex; /* Organiza cabeçalho, menu, conteúdo e rodapé em coluna */
+  flex-direction: column; /* Coloca as áreas principais uma abaixo da outra */
+}
+
+.cabecalho {
+  /* Estiliza o cabeçalho principal */
+  background-color: #111122; /* Define fundo escuro para o cabeçalho */
+  color: white; /* Define texto branco */
+  text-align: center; /* Centraliza os textos do cabeçalho */
+  padding: 35px; /* Cria espaço interno no cabeçalho */
+}
+
+.menu {
+  /* Estiliza o menu de navegação */
+  display: flex; /* Ativa o Flexbox no menu */
+  justify-content: center; /* Centraliza os links horizontalmente */
+  align-items: center; /* Alinha os links verticalmente no centro */
+  flex-wrap: wrap; /* Permite que o menu quebre linha em telas menores */
+  gap: 20px; /* Cria espaço entre os links do menu */
+  background-color: #7b2ff7; /* Define fundo roxo para o menu */
+  padding: 15px; /* Cria espaço interno no menu */
+}
+
+.menu a {
+  /* Estiliza os links dentro do menu */
+  color: white; /* Define a cor branca para os links */
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  font-weight: bold; /* Deixa os links em negrito */
+  padding: 6px 10px; /* Aumenta a área clicável de cada link do menu */
+}
+
+.menu a:hover,
+.menu a:focus {
+  /* Cria destaque visual quando o mouse passa pelo link ou quando ele recebe foco pelo teclado */
+  background-color: #5b1ccf; /* Escurece o fundo do link para indicar interação */
+  outline: none; /* Remove o contorno padrão do navegador no estado de foco */
+}
+
+.cabecalho,
+.explicacao-flex,
+.disciplinas,
+.laboratorio-flex,
+.rodape {
+  scroll-margin-top: 20px; /* Cria uma pequena folga acima da seção ao navegar pelo menu */
+}
+
+.conteudo {
+  /* Estiliza a área principal da página */
+  flex: 1; /* Faz o conteúdo crescer e empurrar o rodapé para o fim da tela */
+  display: flex; /* Ativa o Flexbox dentro da área principal */
+  flex-direction: column; /* Organiza as seções principais uma abaixo da outra */
+  gap: 30px; /* Cria espaço uniforme entre as seções do conteúdo */
+  padding: 30px; /* Cria espaço interno no conteúdo principal */
+  box-sizing: border-box; /* Inclui o padding dentro do cálculo total de largura da área */
+}
+
+.apresentacao {
+  /* Estiliza o bloco de apresentação */
+  background-color: #e9ddff; /* Define fundo roxo claro */
+  padding: 25px; /* Cria espaço interno dentro do bloco */
+  border-left: 8px solid #7b2ff7; /* Cria uma borda lateral para destaque */
+}
+
+.apresentacao h2,
+.explicacao-flex h2,
+.disciplinas h2,
+.laboratorio-flex h2 {
+  /* Padroniza os títulos principais das seções de conteúdo */
+  color: #5b1ccf; /* Define a cor roxa para conectar os títulos à identidade visual da página */
+  margin-top: 0; /* Remove a margem superior para alinhar melhor o título dentro da seção */
+}
+
+.apresentacao p,
+.explicacao-flex p,
+.disciplinas p,
+.laboratorio-flex p {
+  /* Padroniza os parágrafos das seções explicativas */
+  color: #333333; /* Usa uma cor escura para facilitar a leitura dos textos */
+  font-size: 17px; /* Aumenta levemente o tamanho do texto explicativo */
+  line-height: 1.5; /* Cria espaçamento entre linhas para deixar a leitura mais confortável */
+}
+
+.explicacao-flex,
+.disciplinas,
+.laboratorio-flex {
+  /* Estiliza as seções principais que explicam e demonstram o Flexbox */
+  background-color: white; /* Define fundo branco para destacar as seções do fundo da página */
+  border: 2px solid #d9c7ff; /* Cria uma borda roxa clara para delimitar cada seção */
+  padding: 25px; /* Cria espaço interno entre o texto e as bordas das seções */
+}
+
+.explicacao-flex strong,
+.disciplinas strong {
+  /* Destaca termos importantes dentro dos textos explicativos */
+  color: #5b1ccf; /* Aplica roxo nos termos em negrito para chamar atenção */
+}
+
+.caixas-flex {
+  /* Organiza as caixas de conceitos usando Flexbox */
+  display: flex; /* Ativa o Flexbox no grupo de caixas explicativas */
+  flex-wrap: wrap; /* Permite que as caixas quebrem para outra linha em telas menores */
+  gap: 20px; /* Cria espaçamento uniforme entre as caixas */
+  margin-top: 20px; /* Afasta as caixas do parágrafo anterior */
+}
+
+.caixa-flex {
+  /* Estiliza cada caixa de conceito sobre Flexbox */
+  flex: 1 1 240px; /* Faz a caixa crescer, encolher e ter 240px como tamanho base */
+  background-color: #f7fbff; /* Usa um fundo claro para diferenciar a caixa da seção */
+  border-left: 8px solid #37d5a6; /* Cria uma borda lateral verde para destacar o conceito */
+  padding: 18px; /* Cria espaço interno dentro da caixa de conceito */
+}
+
+.caixa-flex h3 {
+  /* Estiliza os subtítulos das caixas de conceito */
+  color: #111122; /* Usa uma cor escura para dar contraste ao subtítulo */
+  margin-top: 0; /* Remove a margem superior para alinhar o subtítulo com o topo da caixa */
+}
+
+.caixa-flex code,
+.demo-flex code {
+  /* Destaca trechos de código citados nos textos */
+  display: inline-block; /* Permite aplicar padding e largura máxima no trecho de código */
+  max-width: 100%; /* Impede que textos longos de código ultrapassem a largura da caixa */
+  background-color: #e9ddff; /* Define um fundo roxo claro para identificar o código */
+  color: #5b1ccf; /* Usa roxo mais forte no texto do código */
+  padding: 4px 6px; /* Cria espaço interno ao redor do texto de código */
+  box-sizing: border-box; /* Inclui o padding dentro da largura máxima permitida */
+  overflow-wrap: anywhere; /* Permite quebrar palavras longas para evitar estouro da caixa */
+}
+
+.cards {
+  /* Estiliza o contêiner que agrupa todos os cards */
+  display: flex; /* Ativa o Flexbox para organizar os cards */
+  justify-content: center; /* Centraliza os cards na linha */
+  align-items: stretch; /* Faz os cards acompanharem a mesma altura quando possível */
+  flex-wrap: wrap; /* Permite que os cards desçam quando a tela ficar menor */
+  gap: 25px; /* Cria espaço entre os cards */
+  margin-top: 20px; /* Afasta o grupo de cards do texto explicativo acima */
+}
+
+.card {
+  /* Estiliza cada card individual */
+  display: flex; /* Ativa Flexbox dentro do card para organizar título, texto e botão */
+  flex-direction: column; /* Coloca os elementos internos do card um abaixo do outro */
+  align-items: center; /* Centraliza horizontalmente o conteúdo interno do card */
+  background-color: white; /* Define fundo branco para os cards */
+  width: 250px; /* Define largura fixa para cada card */
+  min-height: 190px; /* Garante altura mínima para os cards ficarem visualmente equilibrados */
+  padding: 25px; /* Cria espaço interno entre o conteúdo e a borda do card */
+  border: 2px solid #7b2ff7; /* Cria borda roxa ao redor do card */
+  text-align: center; /* Centraliza o conteúdo textual do card */
+  box-sizing: border-box; /* Inclui padding e borda dentro da largura definida do card */
+}
+
+.card h2 {
+  /* Estiliza os títulos dos cards */
+  color: #5b1ccf; /* Define cor roxa para os títulos */
+}
+
+.card p {
+  /* Estiliza os textos dos cards */
+  color: #333333; /* Define cor escura para facilitar a leitura */
+  font-size: 16px; /* Define tamanho da fonte dos parágrafos */
+}
+
+.botao-estudar {
+  /* Estiliza os links de estudo com aparência de botão */
+  display: inline-block; /* Permite que o link receba padding e se comporte como um botão */
+  margin-top: auto; /* Empurra o botão para a parte inferior do card usando Flexbox */
+  background-color: #37d5a6; /* Define fundo verde para o botão */
+  color: #111122; /* Define cor escura para o texto do botão */
+  border: none; /* Remove a borda padrão do botão */
+  padding: 10px 20px; /* Cria espaçamento interno no botão */
+  font-weight: bold; /* Deixa o texto do botão em negrito */
+  text-decoration: none; /* Remove o sublinhado padrão do link */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: background-color 0.2s, transform 0.2s; /* Suaviza a mudança de cor e o movimento no hover */
+}
+
+.botao-estudar:hover,
+.botao-estudar:focus {
+  /* Define a aparência do botão quando o usuário passa o mouse ou navega pelo teclado */
+  background-color: #28b88c; /* Escurece o verde para mostrar que o botão está ativo */
+  transform: translateY(-2px); /* Move o botão levemente para cima para criar efeito de destaque */
+  outline: none; /* Remove o contorno padrão do navegador no estado de foco */
+}
+
+.demos-flex {
+  /* Organiza os exemplos do laboratório visual usando Flexbox */
+  display: flex; /* Ativa o Flexbox para distribuir os blocos de demonstração */
+  flex-wrap: wrap; /* Permite que os blocos desçam para outra linha se faltar espaço */
+  gap: 20px; /* Cria espaço uniforme entre os blocos de demonstração */
+  margin-top: 20px; /* Afasta o laboratório do texto introdutório da seção */
+}
+
+.demo-flex {
+  /* Estiliza cada bloco individual do laboratório visual */
+  flex: 1 1 260px; /* Faz o bloco crescer, encolher e usar 260px como tamanho inicial */
+  background-color: #fafaff; /* Usa fundo claro para separar o exemplo da página */
+  border: 2px solid #d9c7ff; /* Cria uma borda roxa clara ao redor do exemplo */
+  padding: 18px; /* Cria espaço interno dentro do bloco de demonstração */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura do bloco */
+}
+
+.demo-flex h3 {
+  /* Estiliza os títulos de cada exemplo do laboratório */
+  color: #111122; /* Usa cor escura para dar contraste ao título do exemplo */
+  margin-top: 0; /* Remove a margem superior para alinhar o título ao topo do bloco */
+}
+
+.palco-flex {
+  /* Representa visualmente o contêiner flexível onde os itens são organizados */
+  display: flex; /* Ativa o Flexbox na área tracejada de demonstração */
+  gap: 10px; /* Cria espaço entre os itens numerados do exemplo */
+  min-height: 110px; /* Garante altura suficiente para observar alinhamentos verticais */
+  background-color: #ffffff; /* Define fundo branco para destacar os itens flexíveis */
+  border: 2px dashed #7b2ff7; /* Usa borda tracejada para indicar a área do contêiner flexível */
+  padding: 14px; /* Cria espaço interno entre os itens e a borda tracejada */
+  margin: 16px 0; /* Separa a área de demonstração do título e da explicação */
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total do palco */
+}
+
+.palco-flex span {
+  /* Estiliza cada item flexível numerado dentro dos exemplos */
+  display: flex; /* Usa Flexbox dentro do item para centralizar o número */
+  align-items: center; /* Centraliza o número verticalmente dentro do item */
+  justify-content: center; /* Centraliza o número horizontalmente dentro do item */
+  width: 48px; /* Define largura fixa para os itens do exemplo */
+  height: 48px; /* Define altura fixa para os itens do exemplo */
+  background-color: #37d5a6; /* Define fundo verde para destacar os itens flexíveis */
+  color: #111122; /* Define cor escura para o número dentro do item */
+  font-weight: bold; /* Deixa o número em negrito para melhorar a visualização */
+}
+
+.exemplo-center {
+  /* Demonstra centralização no eixo principal e no eixo cruzado */
+  justify-content: center; /* Centraliza os itens horizontalmente no contêiner */
+  align-items: center; /* Centraliza os itens verticalmente no contêiner */
+}
+
+.exemplo-between {
+  /* Demonstra distribuição do espaço livre entre os itens */
+  justify-content: space-between; /* Coloca o primeiro item no início, o último no fim e distribui o espaço entre eles */
+  align-items: center; /* Mantém os itens centralizados verticalmente no contêiner */
+}
+
+.exemplo-align {
+  /* Demonstra o alinhamento dos itens no eixo cruzado */
+  align-items: center; /* Alinha os itens pelo centro vertical mesmo com alturas diferentes */
+}
+
+.exemplo-align .baixo {
+  height: 38px; /* Define uma altura menor para comparar o alinhamento vertical */
+}
+
+.exemplo-align .medio {
+  height: 64px; /* Define uma altura intermediária para comparar o alinhamento vertical */
+}
+
+.exemplo-align .alto {
+  height: 90px; /* Define uma altura maior para evidenciar o efeito do align-items */
+}
+
+.exemplo-wrap {
+  /* Demonstra a quebra de linha dos itens flexíveis */
+  flex-wrap: wrap; /* Permite que os itens passem para a próxima linha quando não couberem */
+  align-content: flex-start; /* Agrupa as linhas quebradas no início vertical do contêiner */
+}
+
+.rodape {
+  /* Estiliza o rodapé */
+  background-color: #111122; /* Define fundo escuro no rodapé */
+  color: white; /* Define texto branco no rodapé */
+  text-align: center; /* Centraliza o texto do rodapé */
+  padding: 20px; /* Cria espaço interno no rodapé */
+}
+
+.rodape p {
+  margin: 0; /* Remove a margem padrão do parágrafo para o rodapé ficar mais compacto */
+}
+
+@media (max-width: 700px) {
+  /* Ajusta o layout quando a largura da tela é menor que 700px */
+  .cabecalho {
+    padding: 25px; /* Reduz o espaço interno do cabeçalho em telas menores */
+  }
+
+  .conteudo {
+    padding: 18px; /* Reduz o espaço interno do conteúdo para aproveitar melhor a tela */
+  }
+
+  .card {
+    width: 100%; /* Faz cada card ocupar toda a largura disponível no celular */
+  }
+}

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portal Flexbox</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="cabecalho" id="inicio">
+      <h1>Flexbox</h1>
+      <p>Praticando layout com Flexbox</p>
+    </header>
+
+    <nav class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#conceitos">Conceitos</a>
+      <a href="#disciplinas">Disciplinas</a>
+      <a href="#laboratorio">Laboratório</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <main class="conteudo">
+      <section class="apresentacao">
+        <h2>Bem-vindo ao portal</h2>
+        <p>
+          Esta página foi criada para demonstrar como o Flexbox ajuda a
+          organizar elementos em uma página web. O menu superior, os cards das
+          disciplinas e os exemplos visuais abaixo usam Flexbox para alinhar,
+          distribuir e controlar o espaço entre os elementos.
+        </p>
+      </section>
+
+      <section class="explicacao-flex" id="conceitos">
+        <h2>O que o Flexbox está demonstrando?</h2>
+        <p>
+          O Flexbox funciona a partir de um elemento pai, chamado de contêiner
+          flexível. Quando usamos <strong>display: flex</strong> nesse
+          contêiner, seus elementos filhos passam a ser organizados em linha ou
+          coluna, podendo ser alinhados, espaçados e distribuídos com mais
+          controle.
+        </p>
+
+        <div class="caixas-flex">
+          <div class="caixa-flex">
+            <h3>Contêiner flexível</h3>
+            <p>
+              É o elemento que recebe <code>display: flex</code>. Nesta página,
+              o menu, a lista de cards e os exemplos visuais são contêineres
+              flexíveis.
+            </p>
+          </div>
+
+          <div class="caixa-flex">
+            <h3>Eixo principal</h3>
+            <p>
+              É a direção principal dos itens. Em uma linha, o eixo principal
+              vai da esquerda para a direita. Em uma coluna, vai de cima para
+              baixo.
+            </p>
+          </div>
+
+          <div class="caixa-flex">
+            <h3>Alinhamento</h3>
+            <p>
+              Propriedades como <code>justify-content</code> e
+              <code>align-items</code> controlam a posição dos itens dentro do
+              espaço disponível.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="disciplinas" id="disciplinas">
+        <h2>Cards organizados com Flexbox</h2>
+        <p>
+          Os cards abaixo estão dentro de um contêiner com
+          <strong>display: flex</strong>. Por isso eles ficam lado a lado,
+          mantêm espaçamento uniforme e podem quebrar para outra linha em telas
+          menores.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h2>HTML</h2>
+            <p>Responsável pela estrutura da página.</p>
+            <a
+              class="botao-estudar"
+              href="https://www.w3schools.com/html/default.asp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Estudar
+            </a>
+          </div>
+
+          <div class="card">
+            <h2>CSS</h2>
+            <p>Responsável pela aparência visual da página.</p>
+            <a
+              class="botao-estudar"
+              href="https://www.w3schools.com/css/default.asp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Estudar
+            </a>
+          </div>
+
+          <div class="card">
+            <h2>JavaScript</h2>
+            <p>Responsável pela interatividade da página.</p>
+            <a
+              class="botao-estudar"
+              href="https://www.w3schools.com/js/default.asp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Estudar
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="laboratorio-flex" id="laboratorio">
+        <h2>Laboratório visual de Flexbox</h2>
+        <p>
+          Compare os exemplos abaixo. As caixas pequenas são os itens flexíveis,
+          e a área tracejada representa o contêiner onde o Flexbox está agindo.
+        </p>
+
+        <div class="demos-flex">
+          <article class="demo-flex">
+            <h3><code>justify-content: center</code></h3>
+            <div class="palco-flex exemplo-center">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <p>Os itens ficam centralizados no eixo principal.</p>
+          </article>
+
+          <article class="demo-flex">
+            <h3><code>justify-content: space-between</code></h3>
+            <div class="palco-flex exemplo-between">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <p>O espaço livre é distribuído entre os itens.</p>
+          </article>
+
+          <article class="demo-flex">
+            <h3><code>align-items: center</code></h3>
+            <div class="palco-flex exemplo-align">
+              <span class="baixo">1</span>
+              <span class="alto">2</span>
+              <span class="medio">3</span>
+            </div>
+            <p>Os itens ficam alinhados pelo centro no eixo cruzado.</p>
+          </article>
+
+          <article class="demo-flex">
+            <h3><code>flex-wrap: wrap</code></h3>
+            <div class="palco-flex exemplo-wrap">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+            </div>
+            <p>Quando falta espaço, os itens quebram para a próxima linha.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape" id="contato">
+      <p>Curso Técnico em Informática</p>
+    </footer>
+  </body>
+</html>

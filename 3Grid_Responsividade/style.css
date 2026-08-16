@@ -1,0 +1,244 @@
+body {
+  /* Define o estilo geral da página */
+  font-family: Arial, sans-serif; /* Define a fonte padrão do documento */
+  background-color: #f5f5fb; /* Define uma cor de fundo clara */
+  margin: 0; /* Remove a margem padrão do navegador */
+  min-height: 100vh; /* Faz o corpo ocupar pelo menos toda a altura da tela */
+  display: flex; /* Organiza cabeçalho, conteúdo e rodapé usando Flexbox */
+  flex-direction: column; /* Coloca as áreas principais uma abaixo da outra */
+}
+
+.cabecalho {
+  /* Estiliza o cabeçalho da página */
+  background-color: #111122; /* Define fundo escuro no cabeçalho */
+  color: white; /* Define texto branco */
+  text-align: center; /* Centraliza o texto do cabeçalho */
+  padding: 35px; /* Cria espaço interno no cabeçalho */
+}
+
+.layout {
+  /* Estiliza a estrutura principal da página */
+  flex: 1; /* Faz o conteúdo crescer e empurrar o rodapé para o final da tela */
+  display: grid; /* Ativa o CSS Grid */
+  grid-template-columns: 2fr 1fr; /* Cria duas colunas: a primeira maior e a segunda menor */
+  gap: 25px; /* Cria espaço entre as colunas */
+  padding: 30px; /* Cria espaço interno ao redor da área principal */
+  box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total da área */
+}
+
+.contextualizacao {
+  /* Estiliza a seção que apresenta o objetivo da página */
+  grid-column: 1 / -1; /* Faz a contextualização ocupar todas as colunas do grid principal */
+  background-color: white; /* Define fundo branco para destacar a explicação inicial */
+  border: 2px solid #d9c7ff; /* Cria uma borda roxa clara ao redor da seção */
+  padding: 25px; /* Cria espaço interno entre o texto e a borda da seção */
+}
+
+.contextualizacao h2,
+.principal h2,
+.lateral h2,
+.laboratorio-grid h2 {
+  /* Padroniza os títulos das seções principais da página */
+  color: #5b1ccf; /* Define cor roxa para destacar os títulos */
+  margin-top: 0; /* Remove a margem superior para alinhar melhor os títulos */
+}
+
+.contextualizacao p,
+.principal p,
+.laboratorio-grid p {
+  /* Estiliza os textos explicativos das seções */
+  color: #333333; /* Define cor escura para facilitar a leitura */
+  font-size: 17px; /* Aumenta levemente o tamanho dos parágrafos explicativos */
+  line-height: 1.5; /* Cria espaço entre as linhas para melhorar a leitura */
+}
+
+.contextualizacao strong {
+  /* Destaca termos importantes dentro da contextualização */
+  color: #5b1ccf; /* Usa roxo nos termos destacados para conectar com o tema visual */
+}
+
+.conceitos-grid {
+  /* Organiza os conceitos principais em uma grade */
+  display: grid; /* Ativa o Grid na área dos conceitos */
+  grid-template-columns: repeat(3, 1fr); /* Cria três colunas de mesmo tamanho */
+  gap: 18px; /* Cria espaço entre as caixas de conceito */
+  margin-top: 20px; /* Afasta os conceitos do texto acima */
+}
+
+.conceito {
+  /* Estiliza cada caixa de conceito */
+  background-color: #f3f0ff; /* Define fundo roxo claro para destacar a caixa */
+  border-left: 6px solid #37d5a6; /* Cria uma borda lateral verde para destaque */
+  padding: 18px; /* Cria espaço interno dentro da caixa */
+}
+
+.conceito h3 {
+  /* Estiliza os títulos das caixas de conceito */
+  color: #111122; /* Define cor escura para dar contraste ao título */
+  margin-top: 0; /* Remove a margem superior do título dentro da caixa */
+}
+
+.principal {
+  /* Estiliza a área principal de conteúdo */
+  background-color: white; /* Define fundo branco para destacar o conteúdo principal */
+  padding: 25px; /* Cria espaço interno dentro da área principal */
+  border: 2px solid #7b2ff7; /* Cria borda roxa ao redor da área principal */
+}
+
+.lateral {
+  /* Estiliza a barra lateral */
+  background-color: #e9ddff; /* Define fundo roxo claro para a lateral */
+  padding: 25px; /* Cria espaço interno dentro da barra lateral */
+  border: 2px solid #37d5a6; /* Cria borda verde ao redor da lateral */
+}
+
+.lateral ul {
+  /* Estiliza a lista de dicas dentro da barra lateral */
+  padding-left: 20px; /* Mantém o recuo dos itens da lista */
+}
+
+.lateral li {
+  /* Estiliza cada item da lista de dicas */
+  color: #333333; /* Define cor escura para facilitar a leitura */
+  margin-bottom: 10px; /* Cria espaço entre as dicas da lista */
+}
+
+.grade-cards {
+  /* Estiliza a grade de cards */
+  display: grid; /* Ativa o Grid dentro da área principal */
+  grid-template-columns: 1fr 1fr; /* Cria duas colunas de mesmo tamanho para os cards */
+  gap: 20px; /* Cria espaço entre os cards */
+  margin-top: 20px; /* Afasta a grade de cards do texto explicativo */
+}
+
+.card {
+  /* Estiliza cada card da grade */
+  background-color: #f3f0ff; /* Define fundo roxo bem claro para o card */
+  padding: 20px; /* Cria espaço interno dentro do card */
+  border-left: 6px solid #7b2ff7; /* Cria uma borda lateral roxa para destacar o card */
+}
+
+.card h3 {
+  /* Estiliza os títulos dos cards */
+  color: #5b1ccf; /* Define cor roxa para os títulos */
+  margin-top: 0; /* Remove a margem superior para alinhar melhor o título do card */
+}
+
+.card p {
+  /* Estiliza os parágrafos dos cards */
+  color: #333333; /* Define cor escura para melhorar a leitura */
+  font-size: 16px; /* Define o tamanho do texto dos cards */
+}
+
+.laboratorio-grid {
+  /* Estiliza a seção que demonstra visualmente o CSS Grid */
+  grid-column: 1 / -1; /* Faz o laboratório ocupar todas as colunas do grid principal */
+  background-color: white; /* Define fundo branco para destacar o laboratório */
+  border: 2px solid #d9c7ff; /* Cria borda roxa clara ao redor da seção */
+  padding: 25px; /* Cria espaço interno dentro do laboratório */
+}
+
+.demo-grid {
+  /* Cria a grade visual usada para demonstrar linhas, colunas e áreas */
+  display: grid; /* Ativa o CSS Grid no exemplo visual */
+  grid-template-columns: repeat(3, 1fr); /* Cria três colunas iguais no exemplo */
+  gap: 14px; /* Cria espaço entre as células da grade */
+  background-color: #fafaff; /* Define fundo claro para destacar a área da grade */
+  border: 2px dashed #7b2ff7; /* Usa borda tracejada para indicar o contêiner do Grid */
+  padding: 16px; /* Cria espaço interno entre as células e a borda tracejada */
+  margin: 20px 0; /* Separa a grade visual dos textos ao redor */
+}
+
+.celula {
+  /* Estiliza cada item dentro da grade visual */
+  background-color: #37d5a6; /* Define fundo verde para destacar cada célula */
+  color: #111122; /* Define cor escura para o texto dentro das células */
+  font-weight: bold; /* Deixa o texto das células em negrito */
+  min-height: 70px; /* Garante altura mínima para visualizar melhor as áreas */
+  display: grid; /* Usa Grid dentro da célula para centralizar o conteúdo */
+  place-items: center; /* Centraliza o texto horizontalmente e verticalmente */
+  text-align: center; /* Centraliza o texto caso ele quebre linha */
+  padding: 12px; /* Cria espaço interno dentro da célula */
+  box-sizing: border-box; /* Inclui o padding no tamanho total da célula */
+}
+
+.destaque {
+  /* Demonstra um item ocupando todas as colunas da grade */
+  grid-column: 1 / -1; /* Faz a célula atravessar da primeira até a última coluna */
+  background-color: #7b2ff7; /* Define fundo roxo para destacar a área maior */
+  color: white; /* Define texto branco para contrastar com o fundo roxo */
+}
+
+.lateral-demo {
+  /* Demonstra um item ocupando mais espaço vertical na grade */
+  grid-row: span 2; /* Faz a célula ocupar duas linhas da grade */
+  background-color: #e9ddff; /* Define fundo roxo claro para diferenciar a lateral */
+}
+
+.rodape-demo {
+  /* Demonstra uma área final atravessando toda a grade */
+  grid-column: 1 / -1; /* Faz a célula ocupar todas as colunas na última linha */
+  background-color: #111122; /* Define fundo escuro para parecer um rodapé interno */
+  color: white; /* Define texto branco para contrastar com o fundo escuro */
+}
+
+.observacao {
+  /* Destaca a orientação para testar a responsividade da página */
+  background-color: #f3f0ff; /* Define fundo roxo claro para chamar atenção */
+  border-left: 6px solid #37d5a6; /* Cria borda verde indicando uma observação importante */
+  padding: 14px; /* Cria espaço interno na observação */
+}
+
+.rodape {
+  /* Estiliza o rodapé */
+  background-color: #111122; /* Define fundo escuro no rodapé */
+  color: white; /* Define texto branco */
+  text-align: center; /* Centraliza o texto do rodapé */
+  padding: 20px; /* Cria espaço interno no rodapé */
+}
+
+.rodape p {
+  /* Ajusta o texto dentro do rodapé */
+  margin: 0; /* Remove a margem padrão do parágrafo para o rodapé ficar mais compacto */
+}
+
+@media (max-width: 700px) {
+  /* Aplica regras especiais quando a tela tiver até 700px de largura */
+
+  .layout {
+    /* Altera a estrutura principal em telas menores */
+    grid-template-columns: 1fr; /* Transforma o layout em apenas uma coluna */
+    padding: 18px; /* Reduz o espaço interno para aproveitar melhor a largura da tela */
+  }
+
+  .conceitos-grid {
+    /* Altera a grade de conceitos em telas menores */
+    grid-template-columns: 1fr; /* Faz as caixas de conceito ficarem uma abaixo da outra */
+  }
+
+  .grade-cards {
+    /* Altera a grade de cards em telas menores */
+    grid-template-columns: 1fr; /* Faz os cards ficarem um embaixo do outro */
+  }
+
+  .demo-grid {
+    /* Altera o laboratório visual em telas menores */
+    grid-template-columns: 1fr; /* Faz a demonstração do Grid virar uma coluna única */
+  }
+
+  .destaque,
+  .rodape-demo {
+    /* Ajusta as áreas que atravessavam várias colunas no desktop */
+    grid-column: auto; /* Remove o atravessamento de colunas quando existe apenas uma coluna */
+  }
+
+  .lateral-demo {
+    /* Ajusta a célula lateral da demonstração no celular */
+    grid-row: auto; /* Remove a ocupação de duas linhas para simplificar o layout */
+  }
+
+  .cabecalho {
+    /* Ajusta o cabeçalho em telas menores */
+    padding: 20px; /* Reduz o espaçamento interno para caber melhor em telas pequenas */
+  }
+}

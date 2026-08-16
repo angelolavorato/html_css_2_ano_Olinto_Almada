@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Catálogo de Componentes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1>Catálogo de Componentes de Computador</h1>
+      <p>Praticando Box Model e Display com CSS</p>
+    </header>
+
+    <main class="conteudo">
+      <section class="explicacao">
+        <h2>O que estamos observando?</h2>
+        <p>
+          Cada componente abaixo está dentro de uma caixa. Essa caixa possui
+          conteúdo, espaçamento interno, borda e espaçamento externo.
+        </p>
+      </section>
+
+      <section class="conceitos">
+        <h2>Box Model e Display na prática</h2>
+        <p>
+          Esta página demonstra como os elementos HTML se comportam visualmente
+          quando recebem estilos em CSS. Cada componente do catálogo funciona
+          como uma caixa: dentro dela existe o conteúdo, ao redor do conteúdo
+          existe o espaçamento interno, depois vem a borda e, por fora, o
+          espaçamento que separa uma caixa da outra.
+        </p>
+        <p>
+          Além do tamanho e dos espaços, a página também mostra como a
+          propriedade <strong>display</strong> interfere na organização dos
+          elementos. Alguns ocupam uma linha inteira, outros ficam na mesma
+          linha do texto, e outros conseguem ficar lado a lado mantendo largura,
+          altura, margem e preenchimento.
+        </p>
+
+        <div class="caixas-conceito">
+          <div class="caixa-conceito">
+            <h3>Box Model</h3>
+            <p>
+              Nos cards do catálogo, a imagem e o texto são o conteúdo. O
+              padding cria respiro interno, a borda roxa delimita a caixa e a
+              margin afasta um card do outro.
+            </p>
+          </div>
+
+          <div class="caixa-conceito">
+            <h3>Display</h3>
+            <p>
+              A seção final compara elementos block, inline e inline-block para
+              mostrar como cada tipo ocupa espaço e se posiciona dentro da
+              página.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalogo">
+        <div class="card card-processador">
+          <h2>Processador</h2>
+          <img
+            class="imagem-componente"
+            src="assets/cpu.avif"
+            alt="Processador de computador"
+          />
+          <p>Responsável por executar instruções e processar dados.</p>
+          <span class="tag">CPU</span>
+        </div>
+
+        <div class="card card-memoria">
+          <h2>Memória RAM</h2>
+          <img
+            class="imagem-componente"
+            src="assets/ram.webp"
+            alt="memoria RAM de computador"
+          />
+          <p>Armazena temporariamente os dados utilizados pelo sistema.</p>
+          <span class="tag">Memória</span>
+        </div>
+
+        <div class="card card-video">
+          <h2>Placa de Vídeo</h2>
+          <img
+            class="imagem-componente"
+            src="assets/gpu.avif"
+            alt="Placa de vídeo de computador"
+          />
+          <p>Responsável pelo processamento gráfico do computador.</p>
+          <span class="tag">GPU</span>
+        </div>
+      </section>
+
+      <section class="comparacao-display">
+        <h2>Comparando tipos de display</h2>
+        <p class="intro-display">
+          A propriedade <strong>display</strong> define como cada elemento ocupa
+          espaço na página. Compare os exemplos abaixo e observe se os elementos
+          ficam um abaixo do outro, lado a lado ou com tamanho controlado.
+        </p>
+
+        <div class="grupo-display">
+          <article class="tipo-display">
+            <h3><code>display: block</code></h3>
+            <p>
+              Elementos em bloco ocupam a largura disponível e começam em uma
+              nova linha.
+            </p>
+
+            <div class="area-demonstracao">
+              <p class="exemplo-block">Bloco 1</p>
+              <p class="exemplo-block">Bloco 2</p>
+              <p class="exemplo-block">Bloco 3</p>
+            </div>
+
+            <p class="observacao-display">
+              Mesmo com pouco texto, cada bloco força a próxima caixa a descer.
+            </p>
+          </article>
+
+          <article class="tipo-display">
+            <h3><code>display: inline</code></h3>
+            <p>
+              Elementos inline ocupam apenas o espaço do próprio conteúdo e
+              continuam na mesma linha.
+            </p>
+
+            <div class="area-demonstracao">
+              <span class="exemplo-inline">Inline 1</span>
+              <span class="exemplo-inline">Inline 2</span>
+              <span class="exemplo-inline">Inline 3</span>
+            </div>
+
+            <p class="observacao-display">
+              Eles se comportam como palavras dentro de uma frase.
+            </p>
+          </article>
+
+          <article class="tipo-display">
+            <h3><code>display: inline-block</code></h3>
+            <p>
+              Elementos inline-block ficam lado a lado, mas aceitam largura,
+              altura, margin e padding.
+            </p>
+
+            <div class="area-demonstracao">
+              <div class="caixa-inline-block">Caixa 1</div>
+              <div class="caixa-inline-block">Caixa 2</div>
+              <div class="caixa-inline-block">Caixa 3</div>
+            </div>
+
+            <p class="observacao-display">
+              É o comportamento usado nos cards do catálogo de componentes.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>Atividade prática de CSS - Box Model e Display</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Painel Grid e Responsividade</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1>Painel Grid e Responsividade</h1>
+      <p>Praticando Grid e Responsividade</p>
+    </header>
+
+    <main class="layout">
+      <section class="contextualizacao">
+        <h2>O que esta página demonstra?</h2>
+        <p>
+          Esta página mostra como o <strong>CSS Grid</strong> organiza uma
+          interface em linhas e colunas, e como a <strong>responsividade</strong>
+          adapta esse layout para diferentes tamanhos de tela. Em telas maiores,
+          o conteúdo principal e a lateral ficam lado a lado. Em telas menores,
+          eles passam a ocupar uma única coluna para facilitar a leitura.
+        </p>
+
+        <div class="conceitos-grid">
+          <div class="conceito">
+            <h3>Grid</h3>
+            <p>
+              Cria uma grade com colunas e linhas para posicionar elementos com
+              mais controle.
+            </p>
+          </div>
+
+          <div class="conceito">
+            <h3>Responsividade</h3>
+            <p>
+              Faz a página se adaptar ao espaço disponível, sem depender de uma
+              única largura fixa.
+            </p>
+          </div>
+
+          <div class="conceito">
+            <h3>Media Query</h3>
+            <p>
+              Aplica estilos diferentes quando a tela atinge uma largura
+              específica.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="principal">
+        <h2>Conteúdos principais</h2>
+        <p>
+          Os cards abaixo formam uma grade interna. No computador, eles aparecem
+          em duas colunas. Em telas pequenas, a media query transforma essa
+          grade em uma coluna só.
+        </p>
+
+        <div class="grade-cards">
+          <div class="card">
+            <h3>Box Model</h3>
+            <p>Entenda como os elementos funcionam como caixas.</p>
+          </div>
+
+          <div class="card">
+            <h3>Display</h3>
+            <p>Controle como os elementos aparecem na página.</p>
+          </div>
+
+          <div class="card">
+            <h3>Flexbox</h3>
+            <p>Organize elementos em linha ou coluna.</p>
+          </div>
+
+          <div class="card">
+            <h3>Grid</h3>
+            <p>Crie estruturas com linhas e colunas.</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="lateral">
+        <h2>Dicas de estudo</h2>
+        <ul>
+          <li>Teste uma propriedade por vez.</li>
+          <li>Observe o resultado no navegador.</li>
+          <li>Modifique valores e compare.</li>
+          <li>Organize o código com atenção.</li>
+        </ul>
+      </aside>
+
+      <section class="laboratorio-grid">
+        <h2>Laboratório visual de Grid</h2>
+        <p>
+          A área abaixo representa uma grade. Cada caixa ocupa uma célula, e
+          algumas atravessam mais de uma coluna ou linha para mostrar como o
+          Grid permite criar composições mais organizadas.
+        </p>
+
+        <div class="demo-grid">
+          <div class="celula destaque">Cabeçalho da área</div>
+          <div class="celula">Card 1</div>
+          <div class="celula">Card 2</div>
+          <div class="celula lateral-demo">Lateral</div>
+          <div class="celula">Card 3</div>
+          <div class="celula">Card 4</div>
+          <div class="celula rodape-demo">Rodapé da área</div>
+        </div>
+
+        <p class="observacao">
+          Reduza a largura da janela do navegador para observar a mudança: as
+          colunas se reorganizam e o conteúdo passa a ficar mais vertical.
+        </p>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>CSS - Layouts modernos e responsivos</p>
+    </footer>
+  </body>
+</html>

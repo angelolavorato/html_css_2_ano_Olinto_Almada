@@ -1,0 +1,258 @@
+body {
+  /* Define o estilo geral da página */
+  font-family:
+    Arial, sans-serif; /* Define a fonte padrão usada em toda a página */
+  background-color: #f3f0ff; /* Define a cor de fundo geral da página */
+  margin: 0; /* Remove a margem padrão que o navegador coloca no body */
+}
+
+.cabecalho {
+  /* Estiliza a área superior da página */
+  background-color: #111122; /* Define um fundo escuro para destacar o cabeçalho */
+  color: white; /* Define a cor branca para os textos dentro do cabeçalho */
+  text-align: center; /* Centraliza o texto do cabeçalho */
+  padding: 30px; /* Cria espaçamento interno entre o conteúdo e as bordas do cabeçalho */
+}
+
+.conteudo {
+  /* Estiliza a área principal da página */
+  margin: 30px; /* Cria espaço externo entre o conteúdo principal e as bordas da janela */
+}
+
+.explicacao {
+  /* Estiliza o bloco explicativo inicial */
+  background-color: #e9ddff; /* Define uma cor de fundo clara para destacar a explicação */
+  padding: 20px; /* Cria espaço interno dentro da caixa de explicação */
+  border-left: 8px solid #7b2ff7; /* Cria uma borda lateral para destacar visualmente o bloco */
+  margin-bottom: 30px; /* Cria espaço abaixo do bloco explicativo */
+}
+
+.conceitos {
+  /* Explica a relacao entre o conteudo da pagina e os conceitos de CSS */
+  background-color: #ffffff;
+  border: 3px solid #d9c7ff;
+  padding: 24px;
+  margin-bottom: 30px;
+}
+
+.conceitos h2 {
+  color: #5b1ccf;
+  margin-top: 0;
+}
+
+.conceitos p {
+  color: #333333;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.conceitos strong {
+  color: #5b1ccf;
+}
+
+.caixas-conceito {
+  margin-top: 18px;
+}
+
+.caixa-conceito {
+  display: inline-block;
+  width: 45%;
+  min-height: 150px;
+  background-color: #f7fbff;
+  border-left: 8px solid #37d5a6;
+  padding: 18px;
+  margin: 10px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.caixa-conceito h3 {
+  color: #111122;
+  margin-top: 0;
+}
+
+.catalogo {
+  /* Estiliza a área onde ficam os cards */
+  background-color: white; /* Define fundo branco para separar os cards do fundo geral */
+  padding: 20px; /* Cria espaço interno dentro da área do catálogo */
+}
+
+.card {
+  /* Estiliza cada caixa de componente */
+  display: inline-block; /* Permite que as caixas fiquem lado a lado, mas ainda aceitem largura e altura */
+  width: 280px; /* Define a largura de cada card */
+  height: 330px; /* Define a altura de cada card */
+  background-color: #ffffff; /* Define o fundo branco dos cards */
+  border: 3px solid #7b2ff7; /* Cria uma borda roxa ao redor de cada card */
+  margin: 15px; /* Cria espaço externo entre um card e outro */
+  padding: 20px; /* Cria espaço interno entre o conteúdo e a borda do card */
+  vertical-align: top; /* Alinha os cards pelo topo quando estão lado a lado */
+}
+
+.card h2 {
+  /* Estiliza os títulos dentro dos cards */
+  color: #5b1ccf; /* Define a cor roxa para os títulos dos cards */
+  text-align: center; /* Centraliza o título de cada card */
+}
+
+.card p {
+  /* Estiliza os parágrafos dentro dos cards */
+  font-size: 16px; /* Define o tamanho da fonte dos textos dos cards */
+  color: #333333; /* Define uma cor escura para facilitar a leitura */
+}
+
+.tag {
+  /* Estiliza a pequena etiqueta de identificação do componente */
+  display: inline-block; /* Permite aplicar espaçamento interno e manter o tamanho ajustado ao texto */
+  background-color: #37d5a6; /* Define fundo verde para destacar a etiqueta */
+  color: #111122; /* Define cor escura para o texto da etiqueta */
+  padding: 8px; /* Cria espaço interno dentro da etiqueta */
+  font-weight: bold; /* Deixa o texto da etiqueta em negrito */
+}
+
+.card img {
+  /* Estiliza as imagens dentro dos cards */
+  max-width: 100%; /* Limita a largura da imagem ao tamanho máximo do card */
+  height: auto; /* Mantém a proporção da imagem ao redimensionar */
+  display: block; /* Remove espaço em branco embaixo da imagem */
+  margin-top: 10px; /* Cria espaço acima da imagem */
+}
+
+/* Ajustes para as imagens dos componentes caberem dentro das caixas */
+.card h2 {
+  margin: 0 0 12px;
+}
+
+.card p {
+  line-height: 1.35;
+  margin: 12px 0;
+}
+
+.card .imagem-componente {
+  width: 100%;
+  max-width: 235px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.card-memoria .imagem-componente,
+.card-video .imagem-componente {
+  max-width: 260px;
+  height: 145px;
+}
+
+.comparacao-display {
+  /* Estiliza a area de comparacao dos tipos de display */
+  background-color: white;
+  border-top: 6px solid #7b2ff7;
+  padding: 24px;
+  margin-top: 30px;
+}
+
+.comparacao-display h2 {
+  color: #5b1ccf;
+  margin-top: 0;
+}
+
+.intro-display {
+  max-width: 900px;
+  color: #333333;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.intro-display strong {
+  color: #5b1ccf;
+}
+
+.grupo-display {
+  margin-top: 20px;
+}
+
+.tipo-display {
+  display: inline-block;
+  width: 30%;
+  min-width: 250px;
+  min-height: 360px;
+  background-color: #fafaff;
+  border: 2px solid #d9c7ff;
+  padding: 18px;
+  margin: 10px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.tipo-display h3 {
+  color: #111122;
+  margin-top: 0;
+}
+
+.tipo-display code {
+  background-color: #e9ddff;
+  color: #5b1ccf;
+  padding: 4px 6px;
+}
+
+.tipo-display p {
+  color: #333333;
+  line-height: 1.4;
+}
+
+.area-demonstracao {
+  background-color: #ffffff;
+  border: 2px dashed #7b2ff7;
+  padding: 14px;
+  min-height: 120px;
+  margin: 16px 0;
+}
+
+.exemplo-block {
+  /* Demonstra o comportamento de elementos em bloco */
+  display: block; /* Faz o elemento ocupar a linha inteira */
+  background-color: #d9c7ff; /* Define fundo roxo claro para visualizar o espaço ocupado */
+  color: #111122;
+  padding: 10px; /* Cria espaço interno no elemento */
+  margin: 8px 0;
+  text-align: center;
+}
+
+.exemplo-inline {
+  /* Demonstra o comportamento de elementos em linha */
+  display: inline; /* Faz o elemento ocupar apenas o espaço necessário para o texto */
+  background-color: #37d5a6; /* Define fundo verde para visualizar o elemento */
+  color: #111122; /* Define cor escura para o texto */
+  padding: 8px;
+  line-height: 2.6;
+  font-weight: bold;
+}
+
+.caixa-inline-block {
+  /* Demonstra o comportamento do inline-block */
+  display: inline-block; /* Permite ficar lado a lado e aceitar largura, altura, padding e margin */
+  width: 82px; /* Define largura da caixa */
+  height: 58px;
+  background-color: #111122; /* Define fundo escuro para a caixa */
+  color: white; /* Define texto branco */
+  padding: 10px; /* Cria espaço interno na caixa */
+  margin: 6px; /* Cria espaço externo entre as caixas */
+  text-align: center; /* Centraliza o texto dentro da caixa */
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.observacao-display {
+  background-color: #f3f0ff;
+  border-left: 6px solid #37d5a6;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.rodape {
+  /* Estiliza o rodapé da página */
+  background-color: #111122; /* Define fundo escuro no rodapé */
+  color: white; /* Define texto branco no rodapé */
+  text-align: center; /* Centraliza o texto do rodapé */
+  padding: 15px; /* Cria espaço interno no rodapé */
+}
